@@ -20,7 +20,7 @@ public class ControllerUISampleWindow : Controller<ViewSampleWindow>
 
     private void ShowHideCollection()
     {
-        Debug.Log("[ShowHideCollection] StartGameClicked");
+        Debug.Log("[ControllerUISampleWindow] ShowHideCollection");
         _controllerUiSampleCollection.View.Show(!_controllerUiSampleCollection.View.IsShow()); 
     }
 }

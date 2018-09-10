@@ -5,7 +5,7 @@ public class ControllerUISampleCollection : Controller<ViewSampleCollection>
     public override void Initialize()
     {        
         View.Hide();
-        View.TextCaption.text = "Sample Collection Work";     
+        View.TextCaption.text = "Sample Collection";     
         View.ButtonAddItem.onClick.AddListener(AddItem);
         View.ButtonClear.onClick.AddListener(ClearItems);
     }
@@ -25,7 +25,7 @@ public class ControllerUISampleCollection : Controller<ViewSampleCollection>
     private void AddItem()
     {
         int curentCount = View.Collection.Count() + 1;
-        Debug.Log("[SampleCollectionController] AddItem  " + curentCount);     
+        Debug.Log("[ControllerUISampleCollection] AddItem  " + curentCount);     
         
         ItemView item = (ItemView) View.Collection.AddItem();
         item.Caption.text = "Number: " + curentCount;
@@ -36,12 +36,12 @@ public class ControllerUISampleCollection : Controller<ViewSampleCollection>
 
     private void ItemButtonPressed(ItemView item)
     {
-        Debug.Log("[SampleCollectionController] ItemButtonPressed  " + item.Id);        
+        Debug.Log("[ControllerUISampleCollection] ItemButtonPressed  " + item.Id);        
     }
     
     private void ClearItems()
     {
-        Debug.Log("[SampleCollectionController] ClearItems");
+        Debug.Log("[ControllerUISampleCollection] ClearItems");
         View.Collection.Clear();
     }
 }
