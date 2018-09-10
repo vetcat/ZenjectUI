@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ViewSampleCollection : View
+public class UiViewSampleCollection : UIView
 {
 	[SerializeField]
 	private Button _buttonAddItem;
@@ -11,15 +11,15 @@ public class ViewSampleCollection : View
 
 	[SerializeField]
 	private Text _textCaption;
-
+	
 	[SerializeField] 
-	private UICollection _collection;
+	private UICollectionItemView _collectionItemView;
 
 	public Button ButtonAddItem { get { return _buttonAddItem; } }
 	
 	public Button ButtonClear { get { return _buttonClear; } }
 
-	public Text TextCaption { get { return _textCaption; } }
-	
-	public UICollection Collection { get { return _collection; } } 
+	public Text TextCaption { get { return _textCaption; } }		
+
+	public UICollectionItemView CollectionItemView { get { return _collectionItemView; } }
 }

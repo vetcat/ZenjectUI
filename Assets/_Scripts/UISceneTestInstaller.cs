@@ -7,7 +7,7 @@ public class UISceneTestInstaller : MonoInstaller<UISceneTestInstaller>
     public override void InstallBindings()
     {
         Debug.Log("[UISceneTestInstaller] InstallBindings");                
-        Container.BindViewController<ViewSampleWindow, ControllerUISampleWindow>(_uiPrefabs.StartGameView);
-        Container.BindViewController<ViewSampleCollection, ControllerUISampleCollection>(_uiPrefabs.SampleCollectionView);
+        Container.BindViewController<UiViewSampleWindow, UiControllerUiSampleWindow>(_uiPrefabs.StartGameView);
+        Container.BindViewController<UiViewSampleCollection, UiControllerUiSampleCollection>(_uiPrefabs.SampleCollectionView);
     }    
 }

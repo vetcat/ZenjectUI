@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ControllerUISampleCollection : Controller<ViewSampleCollection>
+public class UiControllerUiSampleCollection : UiController<UiViewSampleCollection>
 {        
     public override void Initialize()
     {        
@@ -15,7 +15,7 @@ public class ControllerUISampleCollection : Controller<ViewSampleCollection>
         View.ButtonAddItem.onClick.RemoveListener(AddItem);
         View.ButtonClear.onClick.RemoveListener(ClearItems);
 
-        foreach (var item in View.Collection.GetItems())
+        foreach (var item in View.CollectionItemView.GetItems())
         {
             ItemView itemView = (ItemView) item;
             itemView.ButtonSelect.onClick.RemoveAllListeners();            
@@ -24,10 +24,10 @@ public class ControllerUISampleCollection : Controller<ViewSampleCollection>
     
     private void AddItem()
     {
-        int curentCount = View.Collection.Count() + 1;
+        int curentCount = View.CollectionItemView.Count() + 1;
         Debug.Log("[ControllerUISampleCollection] AddItem  " + curentCount);     
         
-        ItemView item = (ItemView) View.Collection.AddItem();
+        ItemView item = View.CollectionItemView.AddItem();
         item.Caption.text = "Number: " + curentCount;
         //todo: id поле для примера - поля могут быть любые например id пака в магазине
         item.Id = curentCount;
@@ -42,6 +42,6 @@ public class ControllerUISampleCollection : Controller<ViewSampleCollection>
     private void ClearItems()
     {
         Debug.Log("[ControllerUISampleCollection] ClearItems");
-        View.Collection.Clear();
+        View.CollectionItemView.Clear();
     }
 }

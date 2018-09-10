@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class View : MonoBehaviour
+public class UIView : MonoBehaviour
 {
     protected virtual GameObject GameObject
     {

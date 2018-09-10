@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 222565834876786462}
   - component: {fileID: 114137734862115730}
   - component: {fileID: 114678219821536438}
-  - component: {fileID: 114402873862885982}
+  - component: {fileID: 114718732531216448}
   m_Layer: 5
   m_Name: PanelCollection
   m_TagString: Untagged
@@ -290,20 +290,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114402873862885982
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1367615606141770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b85a894bc3e9b649ae4675b939e9350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collectionRoot: {fileID: 224794217078962942}
-  _collectionPrefab: {fileID: 1057513078736032, guid: a9ebd38b55ffa7f4586c9ac015963419,
-    type: 2}
 --- !u!114 &114440316866603280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -420,6 +406,20 @@ MonoBehaviour:
   m_Spacing: {x: 5, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &114718732531216448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367615606141770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c229f516272eb478022e7121c69d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collectionRoot: {fileID: 224794217078962942}
+  _collectionPrefab: {fileID: 114729917797199812, guid: a9ebd38b55ffa7f4586c9ac015963419,
+    type: 2}
 --- !u!114 &114770207465563450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,7 +434,7 @@ MonoBehaviour:
   _buttonAddItem: {fileID: 114887348754304462}
   _buttonClear: {fileID: 114345806649098588}
   _textCaption: {fileID: 114076927944820252}
-  _collection: {fileID: 114402873862885982}
+  _collectionItemView: {fileID: 114718732531216448}
 --- !u!114 &114887348754304462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -574,8 +574,8 @@ RectTransform:
   m_Children:
   - {fileID: 224587497292240594}
   - {fileID: 224431814261513922}
-  - {fileID: 224794217078962942}
   - {fileID: 224686159696751790}
+  - {fileID: 224794217078962942}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -614,7 +614,7 @@ RectTransform:
   m_Children:
   - {fileID: 224313771580354260}
   m_Father: {fileID: 224549455328100350}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -645,15 +645,15 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1367615606141770}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224549455328100350}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: -58.93}
-  m_SizeDelta: {x: -20.39, y: -140.77}
+  m_AnchoredPosition: {x: -1, y: -58.929993}
+  m_SizeDelta: {x: -20.390015, y: -140.76999}
   m_Pivot: {x: 0.5, y: 0.5}

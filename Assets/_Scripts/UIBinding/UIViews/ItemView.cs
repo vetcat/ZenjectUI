@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemView : View
+public class ItemView : UIView
 {
 	public int Id;
 	

@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using Zenject;
 
-public class ControllerUISampleWindow : Controller<ViewSampleWindow>
+public class UiControllerUiSampleWindow : UiController<UiViewSampleWindow>
 {
-    [Inject] private ControllerUISampleCollection _controllerUiSampleCollection;
+    [Inject] private UiControllerUiSampleCollection _uiControllerUiSampleCollection;
     public override void Initialize()
     {
         View.Show();
@@ -21,6 +21,6 @@ public class ControllerUISampleWindow : Controller<ViewSampleWindow>
     private void ShowHideCollection()
     {
         Debug.Log("[ControllerUISampleWindow] ShowHideCollection");
-        _controllerUiSampleCollection.View.Show(!_controllerUiSampleCollection.View.IsShow()); 
+        _uiControllerUiSampleCollection.View.Show(!_uiControllerUiSampleCollection.View.IsShow()); 
     }
 }

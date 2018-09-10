@@ -5,10 +5,10 @@ using Zenject;
 
 public class testUISceneModel : IInitializable
 {
-	private ControllerUISampleWindow _gameControllerUiSampleWindow;		
-	public testUISceneModel(ControllerUISampleWindow gameControllerUiSampleWindow)		
+	private UiControllerUiSampleWindow _gameUiControllerUiSampleWindow;		
+	public testUISceneModel(UiControllerUiSampleWindow gameUiControllerUiSampleWindow)		
 	{
-		_gameControllerUiSampleWindow = gameControllerUiSampleWindow;
+		_gameUiControllerUiSampleWindow = gameUiControllerUiSampleWindow;
 	}
 	
 	public void Initialize()

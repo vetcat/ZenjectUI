@@ -1,26 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class UICollection : MonoBehaviour 
+public abstract class UICollecttion<TMono, TView> : MonoBehaviour where TMono : UICollecttion<TMono, TView> where TView: UIView
 {
     [SerializeField] 
     private Transform _collectionRoot;
 
     [SerializeField] 
-    private GameObject _collectionPrefab;
+    private TView _collectionPrefab;
 
-    private readonly List<View> _items = new List<View>();
+    private readonly List<TView> _items = new List<TView>();
 
-    public View AddItem()
+    public TView AddItem()
     {
-        View item = Instantiate(_collectionPrefab, _collectionRoot).GetComponent<View>();
+        TView item = Instantiate(_collectionPrefab, _collectionRoot).GetComponent<TView>();
         _items.Add(item);
         return item;
     }
         
-    public IEnumerable<View> GetItems()
+    public IEnumerable<TView> GetItems()
     {
         return _items;
     }
